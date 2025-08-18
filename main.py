@@ -27,7 +27,7 @@ async def get_blog_id(id: int):
     return {"blog_id": id}
 
 
-@app.get("/photo/")
+@app.get("/photos/")
 async def get_gallery():
     return {"Gallery list will feature here."}
 
