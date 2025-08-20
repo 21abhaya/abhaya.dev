@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}abhaya.dev{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+        <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>abhaya.dev</h1>
+            </div>
+            <div class="nav">
+                <a href="/blogs">blogs</a>
+                <a href="/photos">photos</a>
+            </div>
+        </div>
+        {% block content %}
+            
+        {% endblock %}
+        <div class="footer">
+            <p>
+                &copy; 2025 abhaya.dev
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,49 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>abhaya.dev</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <h1>abhaya.dev</h1>
-            </div>
-            <div class="nav">
-                <a href="/blogs">blogs</a>
-                <a href="/photos">photos</a>
-            </div>
-        </div>
-        <div class="content">
-            <p>
-                Hi, Abhaya here. I am a software engineer 
-                based out of Kathmandu. I'm very keen about 
-                the web. I have worked primarily with python frameworks
-                such as django and fastapi. I have also worked with
-                javascript frameworks such as next.js.
-            </p>
-            <p>
-                I used to have some hobbies a few years ago.
-                Time to get some new ones now.
-            </p>
-        </div>
-        <div class="content">
-            <h2>Experience</h2>
-            <ul>
-                <li>Ajnalab</li>
-                <li>Yalagarden</li>
-                <li>Brandlogiq</li>
-            </ul>
-        </div>
-        
-        <div class="footer">
-            <p>
-                &copy; 2025 abhaya.dev
-            </p>
-        </div>
+{% extends 'base.html' %}
+{% block title %}Homepage | abhaya.dev{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <p>
+            Hi, Abhaya here. I am a software engineer 
+            based out of Kathmandu. I'm very keen about 
+            the web. I have worked primarily with python frameworks
+            such as django and fastapi. I have also worked with
+            javascript frameworks such as next.js.
+        </p>
+        <p>
+            I used to have some hobbies a few years ago.
+            Time to get some new ones now.
+        </p>
+    </div> 
+    <div class="content">
+        <h2>Experience</h2>
+        <ul>
+            <li>Ajnalab</li>
+            <li>Yalagarden</li>
+            <li>Brandlogiq</li>
+        </ul>
     </div>
-</body>
-</html>
+{% endblock %}
+
+
+
