@@ -17,9 +17,11 @@ async def homepage(request: Request):
     )
 
 
-@app.get("/blogs/")
-async def blog():
-    return {"Blog list will feature here."}
+@app.get("/blogs/", response_class=HTMLResponse)
+async def blog(request: Request):
+    return templates.TemplateResponse(
+        request=request, name='blogs.html',
+    )
 
 
 @app.get("/blogs/{id}")
@@ -27,11 +29,20 @@ async def get_blog_id(id: int):
     return {"blog_id": id}
 
 
-@app.get("/photos/")
-async def get_gallery():
-    return {"Gallery list will feature here."}
+@app.get("/photos/", response_class=HTMLResponse)
+async def get_photos(request: Request):
+    return templates.TemplateResponse(
+        request=request, name='photos.html',
+    )
 
 
 @app.get("/photos/photo/{id}")
-async def get_gallery_item_id(id: int):
+async def get_photo_id(id: int):
     return {"gallery_id": id}
+
+
+@app.get("/books/", response_class=HTMLResponse)
+async def get_photos(request: Request):
+    return templates.TemplateResponse(
+        request=request, name='books.html',
+    )
