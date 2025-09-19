@@ -1,18 +1,13 @@
-from sqlalchemy import Table, Column, String, Integer, DateTime
+from sqlalchemy import Table, Column, String, Integer, DateTime, Text
 from sqlalchemy.orm import registry
+from ..db.database import Base
 
-mapper_registry = registry()
+class Homepage(Base):
+    __tablename__ = "homepage"
 
-homepage = Table(
-    "homepage",
-    mapper_registry.metadata,
-    Column("id", Integer, primary_key=True),
-    Column("content", String(255)),
-    Column("created_at", DateTime, default=datetime.now),
-    Column("updated_at", DateTime, default=datetime.now)
-)
+    id = Column(Integer, primary_key=True)
+    content = Column(Text, nullable=False)
+    created_on = Column(DateTime, nullable=False)
+    updated_on = Column(DateTime, nullable=False)
 
-class Homepage:
-    pass 
 
-mapper_registry.map_imperatively(Homepage, homepage)
